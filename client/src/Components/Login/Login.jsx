@@ -36,9 +36,9 @@ const Login = () => {
         LoginUserName: loginUseName,
         LoginPassword: LoginPassword
       }).then((response)=>{
-        console.log()
+        console.log(response)
         //now we can catch an error if credentials are wrong
-        if(response.data.message || loginUserName == '' || loginPassword == ''){
+        if(response.data.message || loginUseName == '' || LoginPassword == ''){
           //if credential don't match
           navigateTo('/')//so we navigate to the same login page
           setLoginStatus('Credentials do not Exist!')

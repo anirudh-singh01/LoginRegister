@@ -1,10 +1,10 @@
 import React from "react"
+import Sidebar from "./Sidebar/Sidebar"
 
 const Dashboard = () => {
     return (
         <div>
-            This is dashboard page
-            <a href="/">Log out</a>
+            <Sidebar />
         </div>
     )
 }
