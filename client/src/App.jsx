@@ -4,7 +4,7 @@ import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 
 // import react router dom
-import{
+import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
@@ -13,15 +13,19 @@ import{
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <dir><Login/></dir>
+    element: <dir><Login /></dir>
   },
   {
     path: '/register',
-    element: <dir><Register/></dir>
+    element: <dir><Register /></dir>
   },
   {
     path: '/dashboard',
-    element: <dir><Dashboard/></dir>
+    element: <dir><Dashboard /></dir>
+  },
+  {
+    path: '*',
+    element: <div>Not Found</div>
   }
 ])
 
@@ -29,7 +33,7 @@ function App() {
 
   return (
     <div>
-      <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </div>
   )
 }
