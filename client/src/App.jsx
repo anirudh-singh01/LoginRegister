@@ -2,12 +2,29 @@ import './App.css'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
+import Activity from './Components/Activity'
 
 // import react router dom
 import {
   createBrowserRouter,
   RouterProvider
 } from 'react-router-dom'
+
+// Define sub-routes for the Dashboard component
+const dashboardRoutes = [
+  {
+    path: '/dashboard/firewall',
+    element: <Activity />
+  },
+  {
+    path: 'settings',
+    element: <div>Settings Content</div>
+  },
+  {
+    path: 'profile',
+    element: <div>Profile Content</div>
+  }
+]
 
 //create router 
 const router = createBrowserRouter([
@@ -21,7 +38,8 @@ const router = createBrowserRouter([
   },
   {
     path: '/dashboard',
-    element: <dir><Dashboard /></dir>
+    element: <Dashboard />,  // Dashboard serves as a parent for the sub-routes
+    children: dashboardRoutes
   },
   {
     path: '*',

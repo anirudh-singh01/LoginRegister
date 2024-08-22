@@ -11,12 +11,12 @@ const MenuList = ({ darkTheme }) => {
       
       {/* Menu Item: Home */}
       <Menu.Item key='home' icon={<HomeOutlined />}>
-       <Link to="/">FireWall Task</Link> 
+       <Link to="/dashboard/firewall">FireWall Task</Link> 
       </Menu.Item>
       
       {/* Menu Item: Activity */}
       <Menu.Item key='activity' icon={<AppstoreOutlined />}>
-      <Link to="/sse_task">SSE Task</Link>
+      <Link to="/dashboard/sse_task">SSE Task</Link>
       </Menu.Item>
       
       {/* SubMenu: Tasks */}
